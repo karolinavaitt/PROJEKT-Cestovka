@@ -11,10 +11,39 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
 }
+@media screen and (min-width: 960px) {
+  body {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 40px 0;
+  }
+}
 
 .header__logo {
   display: block;
   margin: 15px auto 50px auto;
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin: 0;
+    display: inline;
+    flex: 1 1 25%;
+    height: 30px;
+    padding-left: 20px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .header__logo {
+    flex: 0 0 236px;
+  }
 }
 
 .menu__list {
@@ -24,16 +53,65 @@ body {
   text-align: center;
   margin-bottom: 50px;
 }
+@media screen and (min-width: 768px) {
+  .menu__list {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 960px) {
+  .menu__list {
+    display: inline;
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    flex: 1 1 75%;
+    padding-left: 20px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .menu {
+    flex: 0 0 auto;
+  }
+}
 
 .menu__link {
   text-decoration: none;
   color: #F03000;
   font-size: 18px;
 }
+.menu__link:hover {
+  color: #FFFFFF;
+}
 
 .menu__item {
   flex: 1 1 calc(100% / 3);
   justify-content: space-evenly;
+}
+.menu__item:hover {
+  background-color: #F03000;
+  padding: 20px;
+}
+@media screen and (min-width: 960px) {
+  .menu__item {
+    display: inline;
+    padding: 0 20px;
+  }
+}
+
+footer {
+  color: #FFFFFF;
+  background-color: #444444;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 24px;
+  margin: 20px 0;
 }
 
 .offer__image--main img {
@@ -112,10 +190,52 @@ body {
     justify-content: space-between;
   }
 }
+@media screen and (min-width: 960px) {
+  .offers {
+    display: grid;
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .offers-first {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 180px);
+    grid-template-areas: "offer-main offer-small1" "offer-main offer-small2";
+  }
+}
+
+.grid__palmy,
+.grid__lodicka {
+  grid-area: offer-main;
+}
+
+.grid__jezero,
+.grid__podkova {
+  grid-area: offer-small1;
+}
+
+.grid__kolo,
+.grid__zatoka {
+  grid-area: offer-small2;
+}
+
+@media screen and (min-width: 960px) {
+  .offers-second {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2, 180px);
+    grid-template-areas: "offer-small1 offer-main" "offer-small2 offer-main";
+  }
+}
 
 @media screen and (min-width: 768px) {
   .offer__item--main {
     flex-basis: 100%;
+  }
+}
+@media screen and (min-width: 960px) {
+  .offer__item--main {
+    margin: 0;
   }
 }
 
@@ -124,12 +244,23 @@ body {
     flex: 0 0 calc((100% - 20px) / 2);
   }
 }
+@media screen and (min-width: 960px) {
+  .offer__item--secondary {
+    margin: 0;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .boxes {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .boxes {
+    flex-wrap: nowrap;
   }
 }
 
@@ -152,6 +283,7 @@ body {
 }
 .box__title {
   margin: 0;
+  font-size: 18px;
 }
 @media screen and (min-width: 768px) {
   .box__title {
@@ -160,6 +292,12 @@ body {
 }
 .box__text {
   margin: 10px 20px 0 0;
+  font-family: "Open Sans", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  .box__text {
+    margin: 0;
+  }
 }
 .box__content {
   margin-left: 20px;
@@ -180,6 +318,19 @@ body {
     margin-bottom: 20px;
   }
 }
+@media screen and (min-width: 960px) {
+  .box {
+    flex: 0 0 calc((100% - 60px) / 4);
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .containers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
 
 .container {
   background-color: #F0F0F0;
@@ -194,6 +345,11 @@ body {
 }
 .container__title {
   margin: 10px 0;
+}
+@media screen and (min-width: 960px) {
+  .container {
+    margin: 0 0 45px 0;
+  }
 }
 
 .container h4,

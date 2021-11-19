@@ -17,11 +17,35 @@ body {
     padding: $spacer;
     font-family: $main-font;
     margin: 0;
+    @media screen and (min-width: 960px) {
+        padding-left: $spacer2;
+        padding-right: $spacer2;
+    }
 }
 
+header {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0 40px 0;
+    }
+
+}
 .header__logo {
     display: block;
     margin: 15px auto 50px auto;
+    @media screen and (min-width: 768px) {
+       margin: 0;
+       display: inline;
+       flex: 1 1 25%;
+       height: 30px;
+       padding-left: 20px;
+    }
+
+    @media screen and (min-width: 960px) {
+        flex: 0 0 236px;
+    }
 }
 
 //menu
@@ -32,20 +56,65 @@ body {
     padding-left: 0;
     text-align: center;
     margin-bottom: 50px;
-           }
+    @media screen and (min-width: 768px) {
+        margin: 0;
+         }
+    @media screen and (min-width: 960px) {
+    display: inline;
+    text-align: right;
+        }
+   
+}
 
+
+.menu {
+    @media screen and (min-width: 768px) {
+        flex: 1 1 75%;
+        padding-left: 20px;
+             } 
+    @media screen and (min-width: 960px) {
+        flex: 0 0 auto;
+}   
+}
 .menu__link {
     text-decoration: none;
     color: $primary-color;
     font-size: 18px;
-       }
+    &:hover {
+       color: $secondary;
+    }
+ }
 
 .menu__item {
     flex: 1 1 calc(100% / 3);
     justify-content: space-evenly;
+    &:hover {
+        background-color: $primary-color;
+        padding: $spacer;
+     }
+
+    @media screen and (min-width: 960px) {
+        display: inline;
+        padding: 0 20px;
+        }
 }
 //konec menu
 
+//paticka
+footer {
+    color: $secondary;
+    background-color: $footer-color;
+    text-align: center;
+    padding: 20px;
+}
+
+//konec paticky
+
+h1 {
+    font-weight: 600;
+    font-size: 24px;
+    margin: 20px 0;
+}
 
 .offer__image--main img {
     height: 240px;
@@ -55,7 +124,7 @@ body {
         height: 380px;
     }
 
-}
+   }
 
 .offer__item--main,
 .offer__item--secondary {
@@ -118,17 +187,64 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     }
+    @media screen and (min-width: 960px) {
+        display: grid;
+        gap: 20px;        
+    }
 }
+
+.offers-first {
+    @media screen and (min-width: 960px) {
+        grid-template-columns: 2fr 1fr; 
+        grid-template-rows: repeat(2, 180px);     
+        grid-template-areas: 
+        "offer-main offer-small1"
+        "offer-main offer-small2"
+    }
+}
+
+.grid__palmy,
+.grid__lodicka {
+    grid-area: offer-main;
+}
+
+.grid__jezero,
+.grid__podkova {
+    grid-area: offer-small1;
+}
+
+.grid__kolo,
+.grid__zatoka {
+    grid-area: offer-small2;
+}
+
+.offers-second {
+    @media screen and (min-width: 960px) {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(2, 180px);
+        grid-template-areas: 
+        "offer-small1 offer-main" 
+        "offer-small2 offer-main" 
+   }
+}
+
+
 
 .offer__item--main {
     @media screen and (min-width: 768px) {
     flex-basis: 100%;
     }
+    @media screen and (min-width: 960px) {
+        margin: 0;
+    }
 }
 
 .offer__item--secondary {
     @media screen and (min-width: 768px) {
-    flex: 0 0 calc((100% - 20px) / 2)
+    flex: 0 0 calc((100% - 20px) / 2);
+       }
+       @media screen and (min-width: 960px) {
+        margin: 0;
     }
 }
 .boxes {
@@ -136,6 +252,11 @@ body {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        margin-top: 20px;
+     }
+    
+    @media screen and (min-width: 960px) {
+        flex-wrap: nowrap;        
     }
 }
 
@@ -156,12 +277,17 @@ body {
     }
     &__title {
         margin: 0;
+        font-size: 18px;
         @media screen and (min-width: 768px) {
             margin-bottom: 20px;
         }
     }
     &__text {
         margin: 10px 20px 0 0;
+        font-family: $text-font;
+        @media screen and (min-width: 768px) {
+            margin: 0;
+        }
     }
     &__content {
         margin-left: 20px;
@@ -180,8 +306,20 @@ body {
         flex: 0 0 calc((100% - 20px) / 2);    
         margin-bottom: 20px;       
     }
+
+     
+    @media screen and (min-width: 960px) {
+        flex: 0 0 calc((100% - 60px) / 4)      
+    }
 }
 
+.containers {
+    @media screen and (min-width: 960px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);    
+        gap: 20px;  
+    }
+}
 .container {
     background-color: $container-color;
     padding: $spacer;
@@ -195,6 +333,10 @@ body {
     }
     &__title {
         margin: 10px 0;
+    }
+
+    @media screen and (min-width: 960px) {
+        margin: 0 0 45px 0; 
     }
 
 }
