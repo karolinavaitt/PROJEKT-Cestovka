@@ -81,22 +81,22 @@ body {
   text-decoration: none;
   color: #F03000;
   font-size: 18px;
-  padding: 20px;
+  padding: 10px;
 }
 .menu__link:hover {
   color: #FFFFFF;
   background-color: #F03000;
 }
+@media screen and (min-width: 768px) {
+  .menu__link:hover {
+    padding: 20px;
+  }
+}
 
 .menu__item {
+  display: inline-block;
   flex: 1 1 calc(100% / 3);
   justify-content: space-evenly;
-}
-@media screen and (min-width: 960px) {
-  .menu__item {
-    display: inline;
-    padding: 0 20px;
-  }
 }
 
 footer {
