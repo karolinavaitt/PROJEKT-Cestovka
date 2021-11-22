@@ -81,6 +81,7 @@ header {
     color: $primary-color;
     font-size: 18px;
     padding: 10px;
+    display: inline-block;
     &:hover  {
        color: $secondary;
        background-color: $primary-color;
@@ -376,7 +377,7 @@ hr {
 }
 
 .content__image {
-    height: 293px;
+    height: 100%;
     width: 100%;
     object-fit: cover;
     margin: 24px 0;

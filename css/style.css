@@ -82,6 +82,7 @@ body {
   color: #F03000;
   font-size: 18px;
   padding: 10px;
+  display: inline-block;
 }
 .menu__link:hover {
   color: #FFFFFF;
@@ -387,7 +388,7 @@ hr {
 }
 
 .content__image {
-  height: 293px;
+  height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
